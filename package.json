@@ -1,11 +1,11 @@
 {
-  "name": "bsb_app",
+  "name": "project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build--dev": "vue-cli-service build --mode development",
-    "build--prod": "vue-cli-service build --mode production",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:prod": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
