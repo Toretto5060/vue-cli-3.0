@@ -1,8 +1,13 @@
 import axios from "axios";
 
-axios.defaults.timeout = 5000;
+let Axiso = axios.create({
+  timeout:3000,
+  baseURL:process.env.VUE_APP_URL
+})
+
+
 // http request 请求拦截器
-axios.interceptors.request.use(
+Axiso.interceptors.request.use(
   config => {
     return config;
   },
@@ -11,7 +16,7 @@ axios.interceptors.request.use(
   }
 );
 // 添加响应拦截器
-axios.interceptors.response.use(
+Axiso.interceptors.response.use(
   response => {
     if (response.status === 200) {
       return Promise.resolve(response);
@@ -29,4 +34,4 @@ axios.interceptors.response.use(
     return Promise.reject(error.response);
   }
 );
-export default axios;
+export default Axiso;
