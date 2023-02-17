@@ -4,8 +4,12 @@
       <MENU></MENU>
     </div>
     <div class="body">
-      <button @click="setMenu">开启&关闭</button>
-      <router-view></router-view>
+      <div class="menu_header">
+        <button @click="setMenu">开启&关闭</button>
+      </div>
+      <div class="content">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -56,7 +60,24 @@ export default {
       width: calc(100% - 2.2rem);
       height: 100%;
       float: left;
-      //transition: all 0.3s;
+      overflow: hidden;
+      .menu_header {
+        width: 100%;
+        height: 0.7rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        //border: 1px solid #ebeef5;
+      }
+      .content {
+        width: 100%;
+        margin-top: 0.1rem;
+        height: calc(100% - 0.8rem);
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+      }
     }
   }
 
