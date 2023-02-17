@@ -5,7 +5,7 @@ module.exports = {
 
   devServer: {
     // host: 'localhost',
-    port: 5060,
+    port: 12580,
     open:false,
     before: app => { }
   }

@@ -1,11 +1,11 @@
 <template>
-  <div id="home">
-
+  <div id="ChatGptCompletions">
+    哈哈哈哈
   </div>
 </template>
 
 <script>
-import {get} from '../api/index'
+// import {ChatGptCompletions} from '../api/index'
 export default {
   name: "home",
   data(){
@@ -14,14 +14,13 @@ export default {
     }
   },
   mounted(){
-    this.getDatas();
   },
   methods:{
-    getDatas() {
-      get().then((res)=>{
-        console.log(res)
-      })
-    }
+    // sendMessage() {
+    //   ChatGptCompletions().then((res)=>{
+    //
+    //   })
+    // }
   }
 };
 </script>

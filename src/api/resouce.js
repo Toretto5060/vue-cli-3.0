@@ -2,7 +2,7 @@ import axios from "axios";
 
 let Axiso = axios.create({
   timeout:3000,
-  baseURL:process.env.VUE_APP_URL
+  baseURL:process.env.VUE_APP_ChatGpt
 })
 
 
